@@ -1,0 +1,61 @@
+# Path to your oh-my-fish.
+set fish_path $HOME/.oh-my-fish
+
+# Theme (good ones are clearance, idan, lanai, numist)
+set fish_theme clearance
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
+# Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
+# set fish_plugins autojump bundler git rails vi-mode
+set fish_plugins autojump bundler git rails rake
+
+# Path to your custom folder (default path is $FISH/custom)
+#set fish_custom $HOME/dotfiles/oh-my-fish
+
+# Load oh-my-fish configuration.
+. $fish_path/oh-my-fish.fish
+
+# Universal variables
+set -U EDITOR vim
+
+# PATHs
+set default_path /usr/bin /usr/sbin /bin /sbin
+set homebrew /usr/local/bin /usr/local/sbin
+set latex "/usr/texbin"
+set odbcsys "/etc"
+set odbc "/usr/local/etc"
+# PATH ($default should be last)
+set -gx PATH $homebrew $latex $odbcsys $odbc $default_path
+# No more bundle exec
+# set -gx  RUBYGEMS_GEMDEPS -
+
+# Alias
+
+## Git
+# alias log='git log --graph --decorate --pretty=oneline'
+alias stat='git status'
+alias branch='git branch'
+alias add='git add -A'
+alias com='git commit -m'
+alias push='git push'
+
+## General
+alias config='sublime ~/.config/fish/config.fish'
+alias web='cd ~/Documents/WebDev'
+alias fgwi='cd ~/Dropbox/Studium/FGWI/ALL\ NEW/'
+alias homo='gayme'
+alias study='cd ~/Dropbox/Studium/'
+
+## TERMINAL
+alias folder_size='du -sh */'
+
+
+# Functions
+# alias generate_random='env LC_CTYPE=C tr -dc "a-zA-Z0-9-_\$\?" < /dev/urandom | head -c 10'
+function generate_random
+  if test -e $argv
+    echo "Usage generate_random [LENGTH]"
+  else
+    env LC_CTYPE=C tr -dc "a-zA-Z0-9-_\$\?" < /dev/urandom | head -c $argv
+  end
+end

@@ -26,8 +26,6 @@ set odbcsys "/etc"
 set odbc "/usr/local/etc"
 # PATH ($default should be last)
 set -gx PATH $homebrew $latex $odbcsys $odbc $default_path
-# No more bundle exec
-# set -gx  RUBYGEMS_GEMDEPS -
 
 # Alias
 

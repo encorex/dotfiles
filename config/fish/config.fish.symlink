@@ -27,9 +27,11 @@ set odbc "/usr/local/etc"
 # PATH ($default should be last)
 set -gx PATH $homebrew $latex $odbcsys $odbc $default_path
 
+################
 # Alias
+################
 
-## Git
+#Git
 
 alias log='git log --graph --full-history --all --color --date=short'
 
@@ -44,11 +46,13 @@ alias push='git push'
 
 alias uml='rake diagram:all'
 
-## General
+#  Config Files
 alias config='sublime ~/.config/fish/config.fish'
+alias dotfiles='cd ~/.dotfiles'
+
+## General
+
 alias web='cd ~/Documents/WebDev'
-alias fgwi='cd ~/Dropbox/Studium/FGWI/ALL\ NEW/'
-alias homo='gayme'
 alias study='cd ~/Dropbox/Studium/'
 
 ## TERMINAL

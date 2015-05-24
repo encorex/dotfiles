@@ -56,7 +56,7 @@ alias push='git push'
 alias uml='rake diagram:all'
 
 #  Config Files
-alias config='sublime ~/.config/fish/config.fish'
+alias config='subl ~/.config/fish/config.fish'
 alias dotfiles='cd ~/.dotfiles'
 
 ## General
